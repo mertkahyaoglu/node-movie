@@ -1,0 +1,33 @@
+{
+  "name": "node-movie",
+  "version": "1.0.0",
+  "description": "Node imdb API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mertkahyaoglu/node-movie"
+  },
+  "keywords": [
+    "movie",
+    "imdb"
+  ],
+  "author": {
+    "name": "Mert Kahyaoğlu",
+    "email": "mertkahyaoglu93@gmail.com",
+    "url": "mertkahyaoglu.github.io"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mertkahyaoglu/node-movie/issues"
+  },
+  "homepage": "https://github.com/mertkahyaoglu/node-movie",
+  "dependencies": {
+    "request": "^2.51.0"
+  }
+}
