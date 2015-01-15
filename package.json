@@ -1,6 +1,6 @@
 {
   "name": "node-movie",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Node imdb API",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/mertkahyaoglu/node-movie",
   "dependencies": {
+    "chalk": "^0.5.1",
     "request": "^2.51.0"
   }
 }

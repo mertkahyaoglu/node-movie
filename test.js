@@ -5,7 +5,7 @@ var nm = require('./');
 describe('node-movie', function(){
   var movie;
   beforeEach(function (done) {
-    nm('inception', function(data) {
+    nm({id:'tt1375666'}, function(data) {
       movie = data;
       done();
     });
