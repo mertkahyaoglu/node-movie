@@ -19,6 +19,9 @@
     "email": "mertkahyaoglu93@gmail.com",
     "url": "mertkahyaoglu.github.io"
   },
+  "files": [
+    "index.js"
+  ],
   "engines": {
     "node": ">=0.10.0"
   },
