@@ -1,6 +1,6 @@
 {
   "name": "node-movie",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Node imdb API",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,9 @@
     "email": "mertkahyaoglu93@gmail.com",
     "url": "mertkahyaoglu.github.io"
   },
+  "files": [
+    "index.js"
+  ],
   "engines": {
     "node": ">=0.10.0"
   },
