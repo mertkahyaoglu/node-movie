@@ -1,11 +1,11 @@
 'use strict';
 var assert = require('assert');
-var nm = require('./');
+var nm = require('./').getByID;
 
 describe('node-movie', function(){
   var movie;
   beforeEach(function (done) {
-    nm({id:'tt1375666'}, function(data) {
+    nm('tt1375666', function(data) {
       movie = data;
       done();
     });

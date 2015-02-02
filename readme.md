@@ -15,12 +15,13 @@ $ npm install --save node-movie
 ```js
 // get movie by title
 var movie = require('node-movie');
-movie({title:'fury'}, function (data) {
+movie('fury', function (data) {
 	console.log(data);
 });
 
 // get movie by imdbID
-movie({id:'tt2713180'}, function (data) {
+var movie = require('node-movie').getByID;
+movie('tt2713180', function (data) {
 	console.log(data);
 });
 // Output:

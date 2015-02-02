@@ -4,7 +4,7 @@
   "description": "Node imdb API",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "jshint && mocha test.js"
   },
   "repository": {
     "type": "git",
