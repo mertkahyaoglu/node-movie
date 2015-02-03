@@ -8,11 +8,7 @@ module.exports = function (title, cb){
   var url = 'http://www.omdbapi.com';
   var qs = {t: title, plot: 'short', r: 'json'};
   request({url:url, qs:qs, json:true}, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      cb(body);
-    }else {
-      cb(error);
-    }
+    cb(error, body);
   });
 };
 
@@ -23,10 +19,6 @@ module.exports.getByID = function (id, cb){
   var url = 'http://www.omdbapi.com';
   var qs = {i: id, plot: 'short', r: 'json'};
   request({url:url, qs:qs, json:true}, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      cb(body);
-    }else {
-      cb(error);
-    }
+    cb(error, body)
   });
 };
