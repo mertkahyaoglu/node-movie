@@ -14,15 +14,9 @@ action "Test" {
   args = "test"
 }
 
-action "Tag" {
-  needs = "Test"
-  uses = "actions/bin/filter@master"
-  args = "tag"
-}
-
 action "Publish" {
-  needs = "Tag"
+  needs = "Test"
   uses = "actions/npm@master"
-  args = "publish --access public"
+  args = "publish"
   secrets = ["NPM_AUTH_TOKEN"]
 }
