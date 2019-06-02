@@ -2,27 +2,25 @@
 
 > Get movie data easily from imdb
 
-
 ## Install
 
 ```
-$ npm install --save node-movie
+$ npm i --save node-movie
 ```
-
 
 ## Usage
 
 ```js
 // get movie by title
-var movie = require('node-movie');
-movie('fury', function (err, data) {
-	console.log(data);
+const movie = require("node-movie");
+movie("fury", data => {
+  console.log(data);
 });
 
 // get movie by imdbID
-var movie = require('node-movie').getByID;
-movie('tt2713180', function (err, data) {
-	console.log(data);
+const movie = require("node-movie").getByID;
+movie("tt2713180", data => {
+  console.log(data);
 });
 // Output:
 // {
@@ -35,7 +33,7 @@ movie('tt2713180', function (err, data) {
 // 	"Director":"David Ayer",
 // 	"Writer":"David Ayer",
 // 	"Actors":"Brad Pitt, Shia LaBeouf, Logan Lerman, Michael Peña",
-// 	"Plot":"April, 1945. As the Allies make their final push in the European Theatre, a battle-hardened army sergeant named Wardaddy commands a Sherman tank and his five-man crew on a deadly mission behind enemy lines. Out-numbered, out-gunned, and with a rookie soldier thrust into their platoon, Wardaddy and his men face overwhelming odds in their heroic attempts to strike at the heart of Nazi Germany.",
+// 	"Plot":"April, 1945. As the Allies make their final push in the European Theatre..",
 // 	"Language":"English, German",
 // 	"Country":"UK, China, USA",
 // 	"Awards":"4 wins & 9 nominations.",
@@ -47,7 +45,19 @@ movie('tt2713180', function (err, data) {
 // 	"Type":"movie",
 // 	"Response":"True"
 // }
+
+// Returns object with error key when failed
+const movie = require("node-movie").getByID;
+movie("tt2", data => {
+  console.log(data);
+});
+
+// Output: { Response: 'False', Error: 'Incorrect IMDb ID.' }
 ```
+
+## Credit
+
+This module is developed using [OMDb](http://www.omdbapi.com/).
 
 ## License
 

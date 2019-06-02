@@ -1,24 +1,28 @@
-'use strict';
-var request = require('request');
+"use strict";
+const fetch = require("node-fetch");
 
-module.exports = function (title, cb){
-  if (typeof title != 'string') {
-    throw TypeError('Expected a string as first argument');
+const BASE_URL = `http://www.omdbapi.com/?apikey=6547d8e&`;
+
+module.exports = async (title, cb) => {
+  if (typeof title != "string") {
+    throw TypeError("Expected a string as first argument");
   }
-  var url = 'http://www.omdbapi.com';
-  var qs = {t: title, plot: 'short', r: 'json'};
-  request({url:url, qs:qs, json:true}, function (error, response, body) {
-    cb(error, body);
-  });
+
+  const url = `${BASE_URL}t=${title}`;
+  const response = await fetch(url);
+  const data = await response.json();
+
+  cb(data);
 };
 
-module.exports.getByID = function (id, cb){
-  if (typeof id != 'string') {
-    throw TypeError('Expected a string as first argument');
+module.exports.getByID = async (id, cb) => {
+  if (typeof id != "string") {
+    throw TypeError("Expected a string as first argument");
   }
-  var url = 'http://www.omdbapi.com';
-  var qs = {i: id, plot: 'short', r: 'json'};
-  request({url:url, qs:qs, json:true}, function (error, response, body) {
-    cb(error, body)
-  });
+
+  const url = `${BASE_URL}i=${id}`;
+  const response = await fetch(url);
+  const data = await response.json();
+
+  cb(data);
 };

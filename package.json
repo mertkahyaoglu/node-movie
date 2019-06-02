@@ -1,10 +1,10 @@
 {
   "name": "node-movie",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Node imdb API",
   "main": "index.js",
   "scripts": {
-    "test": "jshint && mocha test.js"
+    "test": "mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,9 @@
   },
   "homepage": "https://github.com/mertkahyaoglu/node-movie",
   "dependencies": {
-    "request": "^2.51.0"
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4"
   }
 }
